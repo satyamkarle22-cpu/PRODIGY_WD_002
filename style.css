@@ -1,0 +1,195 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:#0f172a;
+}
+
+/* Animated Background */
+
+.background{
+position:absolute;
+width:100%;
+height:100%;
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#7c3aed,
+#ec4899,
+#06b6d4
+);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
+z-index:-2;
+}
+
+@keyframes gradient{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Glass Card */
+
+.container{
+
+width:420px;
+padding:35px;
+
+background:rgba(255,255,255,0.1);
+
+border:1px solid rgba(255,255,255,0.2);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+box-shadow:
+0 8px 32px rgba(0,0,0,0.3);
+
+text-align:center;
+
+color:white;
+}
+
+.container h1{
+margin-bottom:20px;
+font-size:40px;
+}
+
+/* Timer */
+
+#display{
+
+font-size:60px;
+font-weight:700;
+
+margin:20px 0;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#c4b5fd
+);
+
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* Buttons */
+
+.buttons{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+
+margin:20px 0;
+}
+
+button{
+
+padding:12px 22px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:600;
+
+color:white;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(10px);
+
+transition:0.3s;
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 0 15px white,
+0 0 25px #a855f7;
+}
+
+/* Lap Section */
+
+.laps{
+
+margin-top:20px;
+max-height:180px;
+overflow-y:auto;
+}
+
+.laps h2{
+margin-bottom:10px;
+}
+
+#lapList{
+list-style:none;
+}
+
+#lapList li{
+
+background:rgba(255,255,255,0.1);
+
+padding:10px;
+
+margin:8px 0;
+
+border-radius:10px;
+}
+
+::-webkit-scrollbar{
+width:5px;
+}
+
+::-webkit-scrollbar-thumb{
+background:white;
+border-radius:10px;
+}
+
+@media(max-width:500px){
+
+.container{
+width:90%;
+}
+
+#display{
+font-size:45px;
+}
+
+button{
+padding:10px 15px;
+font-size:14px;
+}
+
+}
